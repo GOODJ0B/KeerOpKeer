@@ -1,11 +1,21 @@
 body {
     display: block;
     margin: 8px;
+    background: #335555;
+}
+
+p{
+    margin: 0;
+    position: relative;
+    top: 43%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
 }
 
 .divTable {
     display: table;
-    width: 100%;
     border-width: 1px;
     border-style: initial;
     border-color: initial;
@@ -22,14 +32,43 @@ body {
 
 .colorCell, .divTableHead, .letterCell, .pointsCell {
     height: 40px;
-    width: 6.6%;
+    width: 40px;
     display: table-cell;
-    border-width: 1px;
     border-style: solid;
-    border-color: rgb(153, 153, 153);
-    border-image: initial;
-    padding: 3px 10px;
+    border-color: #335555;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    text-align: center;
+    top: 50%;
+    background: #FFFFFF;
+    border-radius: 15%;
 }
+
+.middleColumn{
+    border-color: white;
+}
+
+.insideCircle{
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+}
+
+.star{
+    color: white;
+    opacity: 0.5;
+    margin: 0;
+    position: relative;
+    top: 33%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 
 .emptyRow {
     display: table-row;

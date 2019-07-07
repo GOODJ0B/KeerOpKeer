@@ -1,7 +1,12 @@
 package nl.jantineislief.keeropkeer.Model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class Player {
 
     private String name;
@@ -17,4 +22,5 @@ public class Player {
         this.jokers = 8;
         this.score = 0;
     }
+
 }

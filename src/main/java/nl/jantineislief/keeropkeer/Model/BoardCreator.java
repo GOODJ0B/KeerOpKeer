@@ -8,14 +8,14 @@ public class BoardCreator {
 
     private final static int BOARD_HEIGHT = 7;
     private final static int BOARD_WIDTH = 15;
+
     private final static Point[] greenPoints = new Point[]{
-            new Point(0, 0), new Point(1, 0), new Point(2, 0),
-            new Point(7, 0), new Point(1, 1), new Point(4, 1),
-            new Point(13, 1), new Point(14, 1), new Point(1, 2),
-            new Point(3, 2), new Point(4, 2), new Point(5, 2),
-            new Point(6, 2), new Point(13, 2), new Point(14, 2),
-            new Point(3, 3), new Point(8, 3), new Point(9, 3),
-            new Point(10, 6), new Point(11, 6), new Point(12, 6)
+            new Point(0, 0), new Point(1, 0), new Point(2, 0), new Point(7, 0),
+            new Point(1, 1), new Point(3, 1), new Point(13, 1), new Point(14, 1),
+            new Point(1, 2), new Point(3, 2), new Point(4, 2), new Point(5, 2),
+            new Point(6, 2), new Point(13, 2), new Point(14, 2), new Point(3, 3),
+            new Point(8, 3), new Point(9, 3), new Point(10, 6), new Point(11, 6),
+            new Point(12, 6)
     };
     private final static Point[] yellowPoints = new Point[]{
             new Point(3, 0), new Point(4, 0), new Point(5, 0),
@@ -61,6 +61,9 @@ public class BoardCreator {
         List<List<ColorCell>> board = createEmptyBoard();
         putColorsOnBoard(board);
         putStarsOnBoard(board);
+        for(List<ColorCell> row : board){
+            row.get(7).setMiddleRow(true);
+        }
         return board;
     }
 
